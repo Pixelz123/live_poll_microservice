@@ -1,0 +1,10 @@
+server:
+  port: 1212
+spring:
+  application:
+    name: leaderboard_service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

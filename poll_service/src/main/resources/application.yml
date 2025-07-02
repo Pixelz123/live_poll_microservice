@@ -1,0 +1,10 @@
+server:
+ port : 8855
+spring: 
+  application:
+   name: poll_service
+  data:
+   mongodb:
+    host: localhost
+    port: 27017
+    database: live_poll

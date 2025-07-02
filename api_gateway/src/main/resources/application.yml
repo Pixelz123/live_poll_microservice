@@ -1,0 +1,28 @@
+server: 
+ port: 8851
+spring: 
+ application: 
+  name: api_gateway
+ cloud: 
+  gateway:
+   routes:
+      - id: testing_route
+        uri: https://google.co.in
+        predicates:
+          - Path=/test/**
+        filters:
+          - StripPrefix=1
+          - AuthFilterFactory
+
+      - id: user_communication_service
+        uri: http://localhost:8854
+        predicates:
+           - Path=/ws/** 
+
+      - id: user_services
+        uri: http://localhost:9001
+        predicates:
+           - Path=/user/**
+        filters:
+           - StripPrefix=1
+           - AuthFilterFactory

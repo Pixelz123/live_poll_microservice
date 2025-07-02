@@ -1,0 +1,10 @@
+spring: 
+ application:
+  name: user_service
+ data:
+  mongodb:
+    host: localhost
+    port: 27017
+    database: live_poll
+server:
+ port: 9001

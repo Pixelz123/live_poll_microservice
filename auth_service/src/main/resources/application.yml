@@ -1,0 +1,10 @@
+server:
+ port: 8850
+spring :
+ application:
+  name: auth_server
+ data:
+  mongodb:
+   host: localhost
+   port: 27017
+   database: live_poll
