@@ -51,12 +51,4 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer {
   public void configureClientInboundChannel(@NonNull ChannelRegistration registration) {
     registration.interceptors(new StompChannelInterceptor(jwtServices)); // Register the interceptor
   }
-  // @Bean
-  // public TaskScheduler messageBrokerTaskScheduler() {
-  // ThreadPoolTaskScheduler scheduler = new ThreadPoolTaskScheduler();
-  // scheduler.setPoolSize(1);
-  // scheduler.setThreadNamePrefix("wss-heartbeat-");
-  // scheduler.initialize();
-  // return scheduler;
-  // }
 }
