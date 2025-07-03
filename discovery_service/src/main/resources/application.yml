@@ -1,0 +1,14 @@
+server:
+ port: 8761
+spring: 
+ application:
+  name: discovery_service
+eureka:
+  client:
+    register-with-eureka: false   # it's the server, it doesn't register itself
+    fetch-registry: false  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
