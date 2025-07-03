@@ -28,6 +28,9 @@ public class RedisSubscriber extends JedisPubSub {
       else if (channel.equals(RedisSubscriberService.REDIS_POLL_END_CHANNEL)){
         websocket_controller.sendEndMessage(message);
       }
+      else if (channel.equals(RedisSubscriberService.REDIS_TIMESUP_CHANNEL)){
+        websocket_controller.sendTimesUp(message);
+      }
 
     } catch (Exception e) {
       System.out.println(e.getMessage());

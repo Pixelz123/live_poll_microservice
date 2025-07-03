@@ -5,6 +5,6 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class PollEndDTO {
+public class PollStatusDTO {
     public String status;
 }

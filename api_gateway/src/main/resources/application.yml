@@ -10,21 +10,14 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: testing_route
-          uri: https://google.co.in
-          predicates:
-            - Path=/test/**
-          filters:
-            - StripPrefix=1
-            - AuthFilterFactory
 
-        - id: user_communication_service
-          uri: http://localhost:8854
+        - id: user-communication-service
+          uri: lb://user-communication-service
           predicates:
             - Path=/ws/** 
 
         - id: user-services
-          uri: http://localhost:9001
+          uri: lb://user-service
           predicates:
             - Path=/user/**
           filters:

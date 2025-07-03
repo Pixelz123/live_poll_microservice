@@ -1,6 +1,6 @@
 spring: 
  application:
-  name: user_service
+  name: user-service
  data:
   mongodb:
     host: localhost
@@ -8,3 +8,9 @@ spring:
     database: live_poll
 server:
  port: 9001
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

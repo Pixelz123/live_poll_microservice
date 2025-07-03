@@ -2,6 +2,12 @@ server:
  port: 8854
 spring:
  application: 
-  name: user_communication_service
+  name: user-communication-service
  main: 
   allow-bean-definition-overriding: true
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

@@ -9,8 +9,8 @@ import org.springframework.stereotype.Controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.live_poll.user_communication_service.dto.LeaderboardDTO;
-import com.live_poll.user_communication_service.dto.PollEndDTO;
 import com.live_poll.user_communication_service.dto.PollQuestionEntity;
+import com.live_poll.user_communication_service.dto.PollStatusDTO;
 import com.live_poll.user_communication_service.dto.UserResponseDTO;
 import com.live_poll.user_communication_service.services.EventPublisher;
 import com.live_poll.user_communication_service.services.RedisPublishServices;
@@ -55,6 +55,11 @@ public class WebsocketController {
         System.out.println("response received :: stage 1\n");
         rabbit_service_publisher.sendForEvaluation(responseJSON);
     }
+    // sends to /admin/{pollId}
+    public void sendTimesUp(String pollId){
+        PollStatusDTO proceedMessage= new PollStatusDTO("proceed");
+        message_template.convertAndSend("/admin/"+pollId,proceedMessage);
+    }
 
     // sends to /admin/{pollId}
     public void sendLeaderboard(LeaderboardDTO leaderboardDTO) {
@@ -63,7 +68,7 @@ public class WebsocketController {
     }
     //sends to /admin/{pollId}
     public void sendEndMessage(String pollId){
-        PollEndDTO endMessage=new PollEndDTO("finished");
+        PollStatusDTO endMessage=new PollStatusDTO("finished");
         message_template.convertAndSend("/admin/"+pollId,endMessage);
     }
 
