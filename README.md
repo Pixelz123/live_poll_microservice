@@ -2,7 +2,7 @@
 
 A distributed **Quiz/Live Polling platform** built with a microservices architecture using technologies like **Redis**, **WebSockets**, **Spring Boot**, and **API Gateway**. This system is designed to efficiently manage live polls, collect real-time responses, and compute leaderboards with high scalability.
 
-> 📌 **Frontend Repository:** [Frontend Repository](https://github.com/Pixelz123/live_poll_frontend)
+> 📌 **Frontend Repository:** [Frontend Repository](https://github.com/Pixelz123/live_poll_frontend_msrv)
 
 ---
 
