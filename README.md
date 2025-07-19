@@ -34,9 +34,10 @@ It uses **Redis pub/sub**, **queues**, and **WebSockets** to provide low-latency
 ---
 
 ## 📀 Architecture
+<img width="957" height="492" alt="Screenshot from 2025-07-19 20-57-32" src="https://github.com/user-attachments/assets/06967d49-5789-4311-9f45-4f124addda05" />
+
 
 &#x20;
-
 Key communication patterns:
 
 - **Pub/Sub** (via Redis) for distributing timeouts and leaderboard updates
