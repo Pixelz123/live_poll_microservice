@@ -64,8 +64,8 @@ Key communication patterns:
 - **Spring Boot** (for all services)
 - **Redis** (for cache, pub/sub, queues)
 - **WebSockets** (real-time communication)
-- **RabbitMQ / Redis Queues** (decoupled communication)
-- **Eureka / Consul** (for service discovery - optional)
+- **RabbitMQ ** (decoupled communication)
+- **Netflix Eureka ** (for service discovery)
 - **PostgreSQL** (for user and quiz data persistence)
 
 ---
